@@ -1,0 +1,25 @@
+
+body {
+    background: rgb(46, 46, 46);
+}
+
+h2 {
+    font-family: monospace;
+    color: white;
+    font-size: 3vw;
+    user-select: none;
+}
+
+.centered {
+    position: fixed; /* or absolute */
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+  }
+
+#mode {
+    color: rgb(226, 220, 128);
+}
