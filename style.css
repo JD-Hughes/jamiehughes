@@ -11,6 +11,7 @@ html {
 a {
   text-decoration: none;
   color: inherit;
+  margin: 0 10px;
 }
 
 body {
@@ -49,7 +50,6 @@ body {
 .button {
   font-size: 1.2em;
   font-family: 'Baloo Bhaijaan', cursive;
-  margin: 0 10px;
   padding: 5px 15px;
   border-radius: 4px;
   background: #024e81;
