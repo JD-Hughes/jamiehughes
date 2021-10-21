@@ -1,10 +1,16 @@
-@import url("https://fonts.googleapis.com/css?family=Baloo+Bhaijaan&display=swap");
-body,html {
-    margin: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan&display=swap');
+body,
+html {
+  margin: 0;
+  padding: 0;
 }
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 body {
@@ -14,23 +20,45 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #2980b9
-  url(bg.jpg) no-repeat fixed center center;
+  background: #5c5c5c url(bg.jpg) no-repeat fixed center center;
   background-size: cover;
+  user-select: none;
 }
 
 .name {
   display: flex;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 5em;
-  font-family: "Baloo Bhaijaan", cursive;
+  font-family: 'Baloo Bhaijaan', cursive;
   text-transform: uppercase;
   text-shadow: 2px 2px #3d3d3d;
   line-height: 60px;
 }
 
 .sub {
-    color: rgb(146, 1, 1);
-    font-size: 1.5em;
-    font-family: "Baloo Bhaijaan", cursive;
+  color: rgb(146, 1, 1);
+  font-size: 1.5em;
+  font-family: 'Baloo Bhaijaan', cursive;
+}
+.links {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.button {
+  font-size: 1.2em;
+  font-family: 'Baloo Bhaijaan', cursive;
+  margin: 0 10px;
+  padding: 5px 15px;
+  border-radius: 4px;
+  background: #024e81;
+  color: white;
+  transition: 200ms;
+}
+
+.button:hover {
+  color: black;
+  background: #0482d6;
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.4);
 }
