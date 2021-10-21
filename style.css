@@ -21,7 +21,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #5c5c5c url(bg.jpg) no-repeat fixed center center;
+  background: #5c5c5c url(https://wallpaperaccess.com/full/1385482.jpg) no-repeat fixed center center;
   background-size: cover;
   user-select: none;
 }
@@ -52,7 +52,7 @@ body {
   font-family: 'Baloo Bhaijaan', cursive;
   padding: 5px 15px;
   border-radius: 4px;
-  background: #024e81;
+  background: #6606c0;
   color: white;
   transition: 200ms;
 }
