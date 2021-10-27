@@ -20,29 +20,44 @@ h2 {
 .flex-column {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
 }
 
-/* .hero-text {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    padding: 0;
-} */
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .hero-text {
 margin: 0;
+margin-top: 40vh;
 padding: 0;
 }
 
 .big-button {
     padding: 0.6em;
     font-size: 20px;
+    margin: 20px;
+}
+
+.big-button:hover {
+    box-shadow: 0px 0px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.bg-red {
+    background-color: red;
+}
+
+.bg-blue {
     background-color: blue;
 }
 
 #mode {
     color: rgb(226, 220, 128);
+}
+
+#mode:hover {
+    text-decoration: underline;
 }
