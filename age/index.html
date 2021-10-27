@@ -3,7 +3,6 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Mortality Clock</title>
 	<link rel="stylesheet" href="style.css">
@@ -13,8 +12,10 @@
 </head>
 
 <body>
-	<div id="main">
-		<h2 class="centered">I am <span id="age"></span> <span id="mode" onclick=changeMode()>years</span> old</h2>
+	<div class="flex-column">
+		<h2 class="hero-text">I am <span id="age"></span> <span id="mode" onclick=changeMode()>years</span> old</h2>
+		<h2 class="big-button">Show Mortality</h2>
+		<input type="date" id="customDate">
 	</div>
 	<script type="text/javascript" src="age.js"></script>
 </body>
