@@ -3,6 +3,7 @@ const places = [12,11,11,10,10,11,9]
 let dob = '1999-05-14'
 let ageEl = document.getElementById("age");
 let modeButton = document.getElementById("mode")
+let datePicker = document.getElementById("customDate")
 let mode = 0
 
 setInterval(() => {
@@ -17,10 +18,13 @@ function changeMode () {
     modeButton.innerText = modes[mode].toString() + 's'
 }
 
-function setDate(dateInput) {
-    //Validate the data
-    //Format the data
-    dob = dateInput;
+function setDate(dateInput = datePicker.value) {
+    if (dateInput == null || dateInput == '') {
+        console.log("Date Picker Empty");
+        return
+    } else {
+        dob = dateInput;
+        console.log("Date changed to ", dob)
+    }
 }
-//Need to add the ability to set your own age
 //I want to be able to calculate mortality http://www.bandolier.org.uk/booth/Risk/dyingage.html
