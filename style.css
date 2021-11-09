@@ -26,13 +26,13 @@ body {
   background: #5c5c5c url(https://wallpaperaccess.com/full/1385482.jpg) no-repeat fixed center center;
   background-size: cover;
   user-select: none;
+  font-family: 'Baloo Bhaijaan', monospace;
 }
 
 .name {
   display: flex;
   color: rgb(255, 255, 255);
   font-size: 5em;
-  font-family: 'Baloo Bhaijaan', cursive;
   text-transform: uppercase;
   text-shadow: 2px 2px #3d3d3d;
   line-height: 60px;
@@ -41,7 +41,6 @@ body {
 .sub {
   color: rgb(146, 1, 1);
   font-size: 1.5em;
-  font-family: 'Baloo Bhaijaan', cursive;
 }
 .links {
   margin-top: 10px;
@@ -51,7 +50,6 @@ body {
 
 .button {
   font-size: 1.2em;
-  font-family: 'Baloo Bhaijaan', cursive;
   padding: 5px 15px;
   border-radius: 4px;
   background: #6606c0;
