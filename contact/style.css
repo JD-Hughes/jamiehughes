@@ -140,3 +140,17 @@ body {
   background-color: #B23121;
   color: #ffffff;
 }
+
+.wrapper .snapchat:hover,
+.wrapper .snapchat:hover .tooltip,
+.wrapper .snapchat:hover .tooltip::before {
+  background-color: #FFFC00;
+  color: #ffffff;
+}
+
+.wrapper .twitch:hover,
+.wrapper .twitch:hover .tooltip,
+.wrapper .twitch:hover .tooltip::before {
+  background-color: #9146ff;
+  color: #ffffff;
+}
