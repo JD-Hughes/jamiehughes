@@ -135,6 +135,6 @@ body {
 .wrapper .email:hover,
 .wrapper .email:hover .tooltip,
 .wrapper .email:hover .tooltip::before {
-  background-color: #f7e7ce;
+  background-color: #B23121;
   color: #ffffff;
 }
