@@ -22,6 +22,13 @@ body {
   background: linear-gradient(315deg, #d7c9c9, #9fbcdd);
 }
 
+h1 {
+  font-size: 45px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .wrapper {
   display: inline-flex;
   flex-wrap: wrap;
@@ -35,9 +42,9 @@ body {
   border-radius: 50%;
   padding: 15px;
   margin: 10px;
-  width: 50px;
-  height: 50px;
-  font-size: 18px;
+  width: 65px;
+  height: 65px;
+  font-size: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,7 +152,7 @@ body {
 .wrapper .snapchat:hover .tooltip,
 .wrapper .snapchat:hover .tooltip::before {
   background-color: #FFFC00;
-  color: #ffffff;
+  color: #000000;
 }
 
 .wrapper .twitch:hover,
