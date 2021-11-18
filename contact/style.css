@@ -19,12 +19,14 @@ body {
   width: 100%;
   font-family: "Poppins", sans-serif;
   place-items: center;
-  background: linear-gradient(315deg, #ffffff, #d7e1ec);
+  background: linear-gradient(315deg, #d7c9c9, #9fbcdd);
 }
 
 .wrapper {
   display: inline-flex;
   flex-wrap: wrap;
+  justify-content: center;
+  padding: 45px;
 }
 
 .wrapper .icon {
