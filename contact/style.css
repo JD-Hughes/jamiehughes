@@ -24,6 +24,7 @@ body {
 
 .wrapper {
   display: inline-flex;
+  flex-wrap: wrap;
 }
 
 .wrapper .icon {
@@ -128,5 +129,12 @@ body {
 .wrapper .telegram:hover .tooltip,
 .wrapper .telegram:hover .tooltip::before {
   background-color: #0088cc;
+  color: #ffffff;
+}
+
+.wrapper .email:hover,
+.wrapper .email:hover .tooltip,
+.wrapper .email:hover .tooltip::before {
+  background-color: #f7e7ce;
   color: #ffffff;
 }
