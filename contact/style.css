@@ -29,6 +29,11 @@ h1 {
   margin-bottom: 30px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .wrapper {
   display: inline-flex;
   flex-wrap: wrap;
@@ -159,5 +164,12 @@ h1 {
 .wrapper .twitch:hover .tooltip,
 .wrapper .twitch:hover .tooltip::before {
   background-color: #9146ff;
+  color: #ffffff;
+}
+
+.wrapper .letterboxd:hover,
+.wrapper .letterboxd:hover .tooltip,
+.wrapper .letterboxd:hover .tooltip::before {
+  background-color: #00e054;
   color: #ffffff;
 }

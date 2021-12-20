@@ -24,3 +24,5 @@ setInterval(() => {
     let maths = (Math.pow(yearsAlive*0.00000004521093580786,4) + Math.pow(yearsAlive*0.00000462699183828769,3) + Math.pow(yearsAlive*0.00021686105977165100,2) + yearsAlive*0.00243991806250655000 + 0.00713552195321266000)*100;
     surviveEl.textContent = maths.toString().substring(0,10) + "%"
 }, 500);
+
+// DATASET - https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/deathsregisteredinenglandandwalesseriesdrreferencetables
