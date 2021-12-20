@@ -180,3 +180,10 @@ a {
   background-color: #142c8e;
   color: #ffffff;
 }
+
+.wrapper .zoom:hover,
+.wrapper .zoom:hover .tooltip,
+.wrapper .zoom:hover .tooltip::before {
+  background-color: #2d8cff;
+  color: #ffffff;
+}
