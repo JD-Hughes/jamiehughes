@@ -173,3 +173,10 @@ a {
   background-color: #00e054;
   color: #ffffff;
 }
+
+.wrapper .paypal:hover,
+.wrapper .paypal:hover .tooltip,
+.wrapper .paypal:hover .tooltip::before {
+  background-color: #142c8e;
+  color: #ffffff;
+}
