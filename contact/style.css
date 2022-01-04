@@ -187,3 +187,10 @@ a {
   background-color: #2d8cff;
   color: #ffffff;
 }
+
+.wrapper .spotify:hover,
+.wrapper .spotify:hover .tooltip,
+.wrapper .spotify:hover .tooltip::before {
+  background-color: #1DB954;
+  color: #ffffff;
+}
