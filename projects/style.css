@@ -42,7 +42,7 @@ h3 b {
 .box {
   margin: 10px;
   width: max(300px, calc(100% / 4));
-  padding: 10px 0;
+  padding: 20px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
