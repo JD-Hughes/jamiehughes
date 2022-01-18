@@ -1,0 +1,11 @@
+.name {
+    background: linear-gradient(
+        to right, 
+        rgb(94, 255, 0), 
+        rgba(0, 0, 0, 0)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}

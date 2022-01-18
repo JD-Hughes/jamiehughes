@@ -32,10 +32,10 @@ body {
 .name {
   display: flex;
   color: rgb(255, 255, 255);
-  font-size: 5em;
+  font-size: 6em;
   text-transform: uppercase;
   text-shadow: 2px 2px #3d3d3d;
-  line-height: 60px;
+  line-height: 70px;
 }
 
 .sub {
@@ -65,6 +65,7 @@ body {
 
 
 .snowflake {
+  display: none;  /* HIDE THE SNOWFLAKES!!! */
   color: #fff;
   font-size: 1em;
   font-family: Arial;
