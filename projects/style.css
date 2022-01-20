@@ -1,70 +1,70 @@
 body {
-  margin: 0;
-  background-color: rgba(0, 0, 0, 0.55);
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.55);
 }
 
 .title {
-  font-size: 40px;
-  color: #a2a5af;
-  font-family: "Nanum Gothic", sans-serif;
-  text-align: center;
-  margin: 1em 0 0.5em;
+    font-size: 40px;
+    color: #a2a5af;
+    font-family: "Nanum Gothic", sans-serif;
+    text-align: center;
+    margin: 1em 0 0.5em;
 }
 
 h2 {
-  font-size: 20px;
-  color: #a2a5af;
-  letter-spacing: 2px;
-  font-weight: bold;
-  width: 100%;
-  text-align: center;
-  margin: 0;
-  font-family: "Nanum Gothic", sans-serif;
+    font-size: 20px;
+    color: #a2a5af;
+    letter-spacing: 2px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    font-family: "Nanum Gothic", sans-serif;
 }
 
 h3 {
-  text-align: center;
-  color: #CBCDD8;
-  font-weight: normal;
-  font-size: 16px;
-  margin: 10px 0 10px;
+    text-align: center;
+    color: #cbcdd8;
+    font-weight: normal;
+    font-size: 16px;
+    margin: 10px 0 10px;
 }
 h3 b {
-  color: #FFC033;
+    color: #ffc033;
 }
 
 .outerBox {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .box {
-  margin: 10px;
-  width: max(300px, calc(100% / 4));
-  padding: 20px;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
+    margin: 10px;
+    width: max(300px, calc(100% / 4));
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
 }
 
 .btn {
-  transition: 0.5s ease;
-  padding: 6px 20px;
-  font-size: 14px;
-  letter-spacing: 1px;
-  border-radius: 15px;
-  -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-  background-color: #4F78C9;
-  position: relative;
-  color: #fff;
-  line-height: 1.3em;
-  box-sizing: border-box;
-  margin: 0 5px;
-  min-width: 80px;
-  text-decoration: none;
+    transition: 0.5s ease;
+    padding: 6px 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    background-color: #4f78c9;
+    position: relative;
+    color: #fff;
+    line-height: 1.3em;
+    box-sizing: border-box;
+    margin: 0 5px;
+    min-width: 80px;
+    text-decoration: none;
 }
 .btn:hover {
-  opacity: 0.6;
+    opacity: 0.6;
 }

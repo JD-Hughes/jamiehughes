@@ -1,196 +1,196 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 *:focus,
 *:active {
-  outline: none !important;
-  -webkit-tap-highlight-color: transparent;
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html,
 body {
-  display: grid;
-  height: 100%;
-  width: 100%;
-  font-family: "Poppins", sans-serif;
-  place-items: center;
-  background: linear-gradient(315deg, #d7c9c9, #9fbcdd);
+    display: grid;
+    height: 100%;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    place-items: center;
+    background: linear-gradient(315deg, #d7c9c9, #9fbcdd);
 }
 
 h1 {
-  font-size: 45px;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 30px;
+    font-size: 45px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 .wrapper {
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 45px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 45px;
 }
 
 .wrapper .icon {
-  position: relative;
-  background-color: #ffffff;
-  border-radius: 50%;
-  padding: 15px;
-  margin: 10px;
-  width: 65px;
-  height: 65px;
-  font-size: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 65px;
+    height: 65px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .wrapper .tooltip {
-  position: absolute;
-  top: 0;
-  font-size: 14px;
-  background-color: #ffffff;
-  color: #ffffff;
-  padding: 5px 8px;
-  border-radius: 5px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .wrapper .tooltip::before {
-  position: absolute;
-  content: "";
-  height: 8px;
-  width: 8px;
-  background-color: #ffffff;
-  bottom: -3px;
-  left: 50%;
-  transform: translate(-50%) rotate(45deg);
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background-color: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .wrapper .icon:hover .tooltip {
-  top: -45px;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .wrapper .icon:hover span,
 .wrapper .icon:hover .tooltip {
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .wrapper .facebook:hover,
 .wrapper .facebook:hover .tooltip,
 .wrapper .facebook:hover .tooltip::before {
-  background-color: #3b5999;
-  color: #ffffff;
+    background-color: #3b5999;
+    color: #ffffff;
 }
 
 .wrapper .twitter:hover,
 .wrapper .twitter:hover .tooltip,
 .wrapper .twitter:hover .tooltip::before {
-  background-color: #46c1f6;
-  color: #ffffff;
+    background-color: #46c1f6;
+    color: #ffffff;
 }
 
 .wrapper .instagram:hover,
 .wrapper .instagram:hover .tooltip,
 .wrapper .instagram:hover .tooltip::before {
-  background-color: #e1306c;
-  color: #ffffff;
+    background-color: #e1306c;
+    color: #ffffff;
 }
 
 .wrapper .github:hover,
 .wrapper .github:hover .tooltip,
 .wrapper .github:hover .tooltip::before {
-  background-color: #333333;
-  color: #ffffff;
+    background-color: #333333;
+    color: #ffffff;
 }
 
 .wrapper .youtube:hover,
 .wrapper .youtube:hover .tooltip,
 .wrapper .youtube:hover .tooltip::before {
-  background-color: #de463b;
-  color: #ffffff;
+    background-color: #de463b;
+    color: #ffffff;
 }
 
 .wrapper .linkedin:hover,
 .wrapper .linkedin:hover .tooltip,
 .wrapper .linkedin:hover .tooltip::before {
-  background-color: #0077b5;
-  color: #ffffff;
+    background-color: #0077b5;
+    color: #ffffff;
 }
 
 .wrapper .telegram:hover,
 .wrapper .telegram:hover .tooltip,
 .wrapper .telegram:hover .tooltip::before {
-  background-color: #0088cc;
-  color: #ffffff;
+    background-color: #0088cc;
+    color: #ffffff;
 }
 
 .wrapper .email:hover,
 .wrapper .email:hover .tooltip,
 .wrapper .email:hover .tooltip::before {
-  background-color: #B23121;
-  color: #ffffff;
+    background-color: #b23121;
+    color: #ffffff;
 }
 
 .wrapper .snapchat:hover,
 .wrapper .snapchat:hover .tooltip,
 .wrapper .snapchat:hover .tooltip::before {
-  background-color: #FFFC00;
-  color: #000000;
+    background-color: #fffc00;
+    color: #000000;
 }
 
 .wrapper .twitch:hover,
 .wrapper .twitch:hover .tooltip,
 .wrapper .twitch:hover .tooltip::before {
-  background-color: #9146ff;
-  color: #ffffff;
+    background-color: #9146ff;
+    color: #ffffff;
 }
 
 .wrapper .letterboxd:hover,
 .wrapper .letterboxd:hover .tooltip,
 .wrapper .letterboxd:hover .tooltip::before {
-  background-color: #00e054;
-  color: #ffffff;
+    background-color: #00e054;
+    color: #ffffff;
 }
 
 .wrapper .paypal:hover,
 .wrapper .paypal:hover .tooltip,
 .wrapper .paypal:hover .tooltip::before {
-  background-color: #142c8e;
-  color: #ffffff;
+    background-color: #142c8e;
+    color: #ffffff;
 }
 
 .wrapper .zoom:hover,
 .wrapper .zoom:hover .tooltip,
 .wrapper .zoom:hover .tooltip::before {
-  background-color: #2d8cff;
-  color: #ffffff;
+    background-color: #2d8cff;
+    color: #ffffff;
 }
 
 .wrapper .spotify:hover,
 .wrapper .spotify:hover .tooltip,
 .wrapper .spotify:hover .tooltip::before {
-  background-color: #1DB954;
-  color: #ffffff;
+    background-color: #1db954;
+    color: #ffffff;
 }

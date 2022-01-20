@@ -1,8 +1,8 @@
 body {
     background: #44baa8;
-  }
-  
-  .text {
+}
+
+.text {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -10,8 +10,9 @@ body {
     font-size: 300px;
     filter: url(#gooey);
     font-family: monospace;
-  }
-  .text::before, .text::after {
+}
+.text::before,
+.text::after {
     position: absolute;
     opacity: 0;
     transform: translate(-50%, -50%);
@@ -19,270 +20,270 @@ body {
     animation-timing-function: ease;
     animation-iteration-count: infinite;
     filter: blur(9px);
-  }
-  .text::before {
+}
+.text::before {
     content: " ";
     animation-name: items-odd;
-  }
-  .text::after {
+}
+.text::after {
     content: "J";
     animation-name: items-even;
     animation-delay: 1.1s;
-  }
-  
-  @keyframes items-odd {
+}
+
+@keyframes items-odd {
     3.8961038961% {
-      opacity: 1;
+        opacity: 1;
     }
     7.1428571429% {
-      opacity: 1;
+        opacity: 1;
     }
     11.038961039% {
-      opacity: 0;
+        opacity: 0;
     }
     14.2857142857% {
-      opacity: 0;
+        opacity: 0;
     }
     18.1818181818% {
-      opacity: 1;
+        opacity: 1;
     }
     21.4285714286% {
-      opacity: 1;
+        opacity: 1;
     }
     25.3246753247% {
-      opacity: 0;
+        opacity: 0;
     }
     28.5714285714% {
-      opacity: 0;
+        opacity: 0;
     }
     32.4675324675% {
-      opacity: 1;
+        opacity: 1;
     }
     35.7142857143% {
-      opacity: 1;
+        opacity: 1;
     }
     39.6103896104% {
-      opacity: 0;
+        opacity: 0;
     }
     42.8571428571% {
-      opacity: 0;
+        opacity: 0;
     }
     46.7532467532% {
-      opacity: 1;
+        opacity: 1;
     }
     50% {
-      opacity: 1;
+        opacity: 1;
     }
     53.8961038961% {
-      opacity: 0;
+        opacity: 0;
     }
     57.1428571429% {
-      opacity: 0;
+        opacity: 0;
     }
     61.038961039% {
-      opacity: 1;
+        opacity: 1;
     }
     64.2857142857% {
-      opacity: 1;
+        opacity: 1;
     }
     68.1818181818% {
-      opacity: 0;
+        opacity: 0;
     }
     71.4285714286% {
-      opacity: 0;
+        opacity: 0;
     }
     75.3246753247% {
-      opacity: 1;
+        opacity: 1;
     }
     78.5714285714% {
-      opacity: 1;
+        opacity: 1;
     }
     82.4675324675% {
-      opacity: 0;
+        opacity: 0;
     }
     85.7142857143% {
-      opacity: 0;
+        opacity: 0;
     }
     89.6103896104% {
-      opacity: 1;
+        opacity: 1;
     }
     92.8571428571% {
-      opacity: 1;
+        opacity: 1;
     }
     96.7532467532% {
-      opacity: 0;
+        opacity: 0;
     }
     100% {
-      opacity: 0;
+        opacity: 0;
     }
     0% {
-      content: "J";
+        content: "J";
     }
     14.2856142857% {
-      content: "J";
+        content: "J";
     }
     14.2857142857% {
-      content: "M";
+        content: "M";
     }
     28.5713285714% {
-      content: "M";
+        content: "M";
     }
     28.5714285714% {
-      content: "E";
+        content: "E";
     }
     42.8570428571% {
-      content: "E";
+        content: "E";
     }
     42.8571428571% {
-      content: "H";
+        content: "H";
     }
     57.1427571429% {
-      content: "H";
+        content: "H";
     }
     57.1428571429% {
-      content: "G";
+        content: "G";
     }
     71.4284714286% {
-      content: "G";
+        content: "G";
     }
     71.4285714286% {
-      content: "E";
+        content: "E";
     }
     85.7141857143% {
-      content: "E";
+        content: "E";
     }
     85.7142857143% {
-      content: " ";
+        content: " ";
     }
     99.9999% {
-      content: " ";
+        content: " ";
     }
-  }
-  @keyframes items-even {
+}
+@keyframes items-even {
     3.8961038961% {
-      opacity: 1;
+        opacity: 1;
     }
     7.1428571429% {
-      opacity: 1;
+        opacity: 1;
     }
     11.038961039% {
-      opacity: 0;
+        opacity: 0;
     }
     14.2857142857% {
-      opacity: 0;
+        opacity: 0;
     }
     18.1818181818% {
-      opacity: 1;
+        opacity: 1;
     }
     21.4285714286% {
-      opacity: 1;
+        opacity: 1;
     }
     25.3246753247% {
-      opacity: 0;
+        opacity: 0;
     }
     28.5714285714% {
-      opacity: 0;
+        opacity: 0;
     }
     32.4675324675% {
-      opacity: 1;
+        opacity: 1;
     }
     35.7142857143% {
-      opacity: 1;
+        opacity: 1;
     }
     39.6103896104% {
-      opacity: 0;
+        opacity: 0;
     }
     42.8571428571% {
-      opacity: 0;
+        opacity: 0;
     }
     46.7532467532% {
-      opacity: 1;
+        opacity: 1;
     }
     50% {
-      opacity: 1;
+        opacity: 1;
     }
     53.8961038961% {
-      opacity: 0;
+        opacity: 0;
     }
     57.1428571429% {
-      opacity: 0;
+        opacity: 0;
     }
     61.038961039% {
-      opacity: 1;
+        opacity: 1;
     }
     64.2857142857% {
-      opacity: 1;
+        opacity: 1;
     }
     68.1818181818% {
-      opacity: 0;
+        opacity: 0;
     }
     71.4285714286% {
-      opacity: 0;
+        opacity: 0;
     }
     75.3246753247% {
-      opacity: 1;
+        opacity: 1;
     }
     78.5714285714% {
-      opacity: 1;
+        opacity: 1;
     }
     82.4675324675% {
-      opacity: 0;
+        opacity: 0;
     }
     85.7142857143% {
-      opacity: 0;
+        opacity: 0;
     }
     89.6103896104% {
-      opacity: 1;
+        opacity: 1;
     }
     92.8571428571% {
-      opacity: 1;
+        opacity: 1;
     }
     96.7532467532% {
-      opacity: 0;
+        opacity: 0;
     }
     100% {
-      opacity: 0;
+        opacity: 0;
     }
     0% {
-      content: "A";
+        content: "A";
     }
     14.2856142857% {
-      content: "A";
+        content: "A";
     }
     14.2857142857% {
-      content: "I";
+        content: "I";
     }
     28.5713285714% {
-      content: "I";
+        content: "I";
     }
     28.5714285714% {
-      content: " ";
+        content: " ";
     }
     42.8570428571% {
-      content: " ";
+        content: " ";
     }
     42.8571428571% {
-      content: "U";
+        content: "U";
     }
     57.1427571429% {
-      content: "U";
+        content: "U";
     }
     57.1428571429% {
-      content: "H";
+        content: "H";
     }
     71.4284714286% {
-      content: "H";
+        content: "H";
     }
     71.4285714286% {
-      content: "S";
+        content: "S";
     }
     85.7141857143% {
-      content: "S";
+        content: "S";
     }
     85.7142857143% {
-      content: "J";
+        content: "J";
     }
     99.9999% {
-      content: "J";
+        content: "J";
     }
-  }
+}
