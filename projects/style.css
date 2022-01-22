@@ -1,57 +1,48 @@
 body {
     margin: 0;
     background-color: rgba(0, 0, 0, 0.55);
+    font-family: "Nanum Gothic", sans-serif;
+    color: #cbcdd8;
+    text-align: center;
 }
 
-.title {
-    font-size: 40px;
-    color: #a2a5af;
-    font-family: "Nanum Gothic", sans-serif;
-    text-align: center;
-    margin: 1em 0 0.5em;
+article {
+    padding: 20px;
+    background-color: #000000b3;
+    border-radius: 10px;
 }
 
 h2 {
-    font-size: 20px;
-    color: #a2a5af;
+    font-size: 25px;
     letter-spacing: 2px;
     font-weight: bold;
     width: 100%;
-    text-align: center;
     margin: 0;
-    font-family: "Nanum Gothic", sans-serif;
 }
 
 h3 {
-    text-align: center;
-    color: #cbcdd8;
     font-weight: normal;
     font-size: 16px;
     margin: 10px 0 10px;
 }
-h3 b {
-    color: #ffc033;
-}
 
-.outerBox {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.box {
+.project-grid {
+    display: grid;
     margin: 10px;
-    width: max(300px, calc(100% / 4));
-    padding: 20px;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
+    gap: 10px;
+}
+
+@media (min-width: 30em) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .btn {
     transition: 0.5s ease;
     padding: 6px 20px;
     font-size: 14px;
+    font-weight: bold;
     letter-spacing: 1px;
     border-radius: 15px;
     -moz-border-radius: 15px;
@@ -61,10 +52,11 @@ h3 b {
     color: #fff;
     line-height: 1.3em;
     box-sizing: border-box;
-    margin: 0 5px;
+    margin: 0 40px;
     min-width: 80px;
     text-decoration: none;
 }
 .btn:hover {
-    opacity: 0.6;
+    background-color: #2862d6a9;
+    color: #1eff00;
 }
