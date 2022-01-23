@@ -1,0 +1,46 @@
+{
+    "countries": [
+        "England",
+        "Scotland",
+        "Wales",
+        "Ireland",
+        "France",
+        "Spain",
+        "Italy",
+        "Germany",
+        "Greece",
+        "Mexico",
+        "USA",
+        "Turkey",
+        "Australia",
+        "Belgium"
+    ],
+    "states": [
+        "New York",
+        "North Carolina",
+        "South Carolina",
+        "New Jersey",
+        "Florida",
+        "Hawaii",
+        "Vermont",
+        "California",
+        "Nevada",
+        "Washington",
+        "Washington D.C",
+        "Connecticut",
+        "Arizona",
+        "Massachusetts"
+    ],
+    "jobs": [
+        "Waterski Instructor",
+        "Forklift Driver",
+        "Waterfront Manager",
+        "Race Marshall",
+        "Maintenance/Operations Crew Member",
+        "Bank Intern",
+        "Receptionist",
+        "Activities Manager",
+        "Aerospace Technical Apprentice"
+    ],
+    "fitbit": "Bearer TOKENID HERE"
+}
