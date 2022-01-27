@@ -25,17 +25,20 @@ body {
     overflow: hidden;
 }
 
+/* When the card is hover'd translate the card-content div back to it's original location */
 .card:hover .card-content {
     transform: translateY(0%);
 }
 
 .card-content {
     position: absolute;
+    /* I know this isn't the right way to size this element but I don't want to change it */
     top: 0;
     bottom: 0;
+    /* If it ain't broke, don't fix it ¯\_(ツ)_/¯ */
     background-color: rgba(0, 0, 0, 0.65);
     padding: 1em;
-    transform: translateY(70%);
+    transform: translateY(70%); /* Move the div down so that only the title is showing. Overflow is hidden :)  */
     transform-origin: bottom;
     transition: transform 500ms ease;
 }
@@ -44,6 +47,8 @@ body {
     font-size: 20px;
     margin: 0;
 }
+
+/* Setting up background images for the cards */
 
 #card-family {
     background-image: url(https://static.wixstatic.com/media/fd2753_53dffd5749ec4549be4effb6a9ec8d2c~mv2.jpg);
