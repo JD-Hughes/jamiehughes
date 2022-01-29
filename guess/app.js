@@ -11,25 +11,37 @@ const searchOptions = {
 let movies = [
     { title: "Spectre", src: "kEnK0ZdMThc", alt: ["James Bond"] },
     { title: "John Wick 2", src: "qIalODmFrZk", alt: ["John Wick"] },
-    { title: "Baby Driver", src: "7ARFyrM6gVs", alt: [""] },
-    { title: "Taken", src: "jZOywn1qArI", alt: [""] },
-    { title: "The Social Network", src: "2BE2XhnZ_4g", alt: [""] },
+    { title: "Baby Driver", src: "7ARFyrM6gVs" },
+    { title: "Taken", src: "jZOywn1qArI" },
+    { title: "The Social Network", src: "2BE2XhnZ_4g", alt: ["Social Network"] },
     { title: "Avengers: Infinity War", src: "EpI3x6gf2uA", alt: ["Infinity War", "Avengers Infinity War"] },
     { title: "Spider-man: Into the spider-verse", src: "oJyz1snRgOU", alt: ["spiderman Into the spiderverse", "Spiderman", "Into the spider verse", "Into the spiderverse"] },
     { title: "Avengers: Endgame", src: "tdMaz-x8BAI", alt: ["Endgame"] },
     { title: "X-Men: Days of future past", src: "T9GFyZ5LREQ", alt: ["xmen", "days of future past"] },
-    { title: "Deadpool", src: "tLmStxxzhkI", alt: [""] },
-    { title: "Tenet", src: "4xj0KRqzo-0", alt: [""] },
-    { title: "The Dark Knight", src: "nyepdtx_UI4", alt: [""] },
-    { title: "Inception", src: "TAbbJT0ZXmk", alt: [""] },
+    { title: "Deadpool", src: "tLmStxxzhkI" },
+    { title: "Tenet", src: "4xj0KRqzo-0" },
+    { title: "The Dark Knight", src: "nyepdtx_UI4" },
+    { title: "Inception", src: "TAbbJT0ZXmk" },
     { title: "The Avengers", src: "SLD9xzJ4oeU", alt: ["Avengers"] },
     { title: "Mission Impossible: Ghost Protocol", src: "qtA0JS1lBaY", alt: ["Mission Impossible", "Ghost Protocol"] },
     { title: "Mission Impossible: Fallout", src: "hhLIwmgx3vI", alt: ["Mission Impossible", "Fallout"] },
-    { title: "Legend", src: "zZ7AWVKbPWY", alt: [""] },
-    { title: "The Matrix", src: "zE7PKRjrid4", alt: [""] },
-    { title: "Madagascar", src: "kPE7ZCGjw4o", alt: [""] },
-    { title: "Bee Movie", src: "L46syxgju18", alt: [""] },
+    { title: "Legend", src: "zZ7AWVKbPWY" },
+    { title: "The Matrix", src: "zE7PKRjrid4" },
+    { title: "Madagascar", src: "kPE7ZCGjw4o" },
+    { title: "Bee Movie", src: "L46syxgju18" },
     { title: "How to train your dragon", src: "nPmIhH775L4" },
+    { title: "Ghostbusters", src: "7_pR6mUYtOo" },
+    { title: "Baywatch", src: "WDuIl_uPY_s" },
+    { title: "Now you see me 2", src: "YmGBAiHnK0U", alt: ["Now you see me"] },
+    { title: "Pirates of the Caribbean: The Curse of the Black Pearl", src: "8UseXb_DNhE", alt: ["Pirates of the Caribbean", "the curse of the black perl"] },
+    { title: "Anchorman: The Legend of Ron Burgundy", src: "ipsPgNEmAXI", alt: ["Anchorman"] },
+    { title: "Ace Ventura", src: "khyXMXFSufE" },
+    { title: "Shrek 2", src: "A_HjMIjzyMU" },
+    { title: "The Incredibles", src: "IRPI3lSACFc" },
+    { title: "Despicable Me", src: "8R1OS5jPh2s" },
+    { title: "Kung Fu Panda", src: "Jy2_J5WCzDY" },
+    { title: "Ratatouille", src: "IojkKlmwnOE" },
+    { title: "Guardians Of The Galaxy", src: "YVTXTPYsNDY", alt: ["Guardians"] },
 ];
 
 function changeButton(mode) {
@@ -68,7 +80,6 @@ function changeSRC() {
     inputField.style.textAlign = "left";
     inputField.disabled = false;
     inputField.value = "";
-    console.log(videoID, movies[videoID]["src"]);
 }
 
 function playLast() {
@@ -86,7 +97,6 @@ function compareString(inputString, comparisonList) {
         const lengthScore = Math.abs(inputString.length - fuseSearch["item"].length) / fuseSearch["item"].length;
         score = (fuseScore + lengthScore) / 2;
     }
-    console.log(`Score: ${score}`);
     return score;
 }
 
@@ -99,7 +109,6 @@ function checkAnswer() {
         }
     }
     score = compareString(inputField.value, titleAnswers);
-    console.log(titleAnswers);
     if (score < 0.1) {
         inputField.style.color = "rgb(0,128,0)";
         inputField.style.textAlign = "center";
