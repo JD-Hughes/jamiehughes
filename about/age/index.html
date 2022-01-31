@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Mortality Clock</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    </head>
+
+    <body>
+        <div class="flex-column">
+            <h2 class="hero-text">
+                I am <span id="age"></span>
+                <span id="mode" onclick="changeMode()">years</span> old
+            </h2>
+            <div class="flex-row">
+                <input type="date" id="customDate" />
+                <h2>
+                    <span class="big-button bg-blue" onclick="setDate()"
+                        >Set DOB</span
+                    >
+                </h2>
+            </div>
+            <!-- <h2><span class="big-button bg-red">Show Mortality 💀</span></h2> -->
+        </div>
+        <script type="text/javascript" src="age.js"></script>
+    </body>
+</html>
