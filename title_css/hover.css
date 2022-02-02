@@ -1,0 +1,29 @@
+.name::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+.name:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.name::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    background: hsl(39, 100%, 51%);
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.name {
+    position: relative;
+    font-size: 5rem;
+    padding: 0 0.1em;
+}
