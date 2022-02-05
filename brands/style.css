@@ -30,6 +30,11 @@ img {
     outline-style: solid;
     padding: 10px;
     object-fit: scale-down;
+    transition: 500ms ease;
+}
+
+img:hover {
+    background: white;
 }
 
 h2 {
