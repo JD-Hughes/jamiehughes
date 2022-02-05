@@ -24,7 +24,7 @@ particlesJS("particles-js", {
                 nb_sides: 5,
             },
             image: {
-                src: "https://pnggrid.com/wp-content/uploads/2021/04/Heart-emoji-1024x905.png",
+                src: "../img/heart.png",
                 width: 100,
                 height: 100,
             },
