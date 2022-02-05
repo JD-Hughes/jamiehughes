@@ -24,7 +24,7 @@ particlesJS("particles-js", {
                 nb_sides: 5,
             },
             image: {
-                src: "../img/heart.png",
+                src: "../img/heart.png", //Image to be dropped
                 width: 100,
                 height: 100,
             },
