@@ -1,0 +1,20 @@
+[
+    {
+        "basesalary": 0,
+        "department": "Example Department",
+        "jobtitle": "Example Title",
+        "name": "Employee, Example",
+        "organization": "Example Organization",
+        "source": "employees.json",
+        "hash": "unique_id_here"
+    },
+    {
+        "name": "Jamie Hughes",
+        "basesalary": 20111,
+        "department": "WANTAGE TOWNSHIP",
+        "organization": "C. Hoare & Co",
+        "jobtitle": "Intern",
+        "source": "Salary",
+        "hash": "3f2577cd12b7961458d9bcc07dd27399"
+    }
+]
