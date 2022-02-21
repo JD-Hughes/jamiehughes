@@ -1,12 +1,10 @@
 const player = document.getElementById("video-player");
 const inputField = document.getElementById("player-input");
 const submitButton = document.getElementById("submit-btn");
+
 let videoID = null;
 
-const searchOptions = {
-    includeScore: true,
-    threshold: 0.15,
-};
+const searchOptions = { includeScore: true, threshold: 0.15 };
 
 let movies = [
     { title: "Spectre", src: "kEnK0ZdMThc", alt: ["James Bond"] },
@@ -42,6 +40,36 @@ let movies = [
     { title: "Kung Fu Panda", src: "Jy2_J5WCzDY" },
     { title: "Ratatouille", src: "IojkKlmwnOE" },
     { title: "Guardians Of The Galaxy", src: "YVTXTPYsNDY", alt: ["Guardians"] },
+    { title: "Whiplash", src: "xDAsABdkWSc" },
+    { title: "The Lion King", src: "BAoCYwefq1A", alt: ["Lion King"] },
+    { title: "Back to the future", src: "FWG3Dfss3Jc" },
+    { title: "Django Unchained", src: "t1beG9Y6I9c", alt: ["Django"] },
+    { title: "Hot Fuzz", src: "Cun-LZvOTdw" },
+    { title: "Knives Out", src: "xNwQyNMSUmg" },
+    {
+        title: "Harry Potter and the Deathly Hallows: Part 1",
+        src: "R2zNRrOXbPY",
+        alt: [
+            "Harry Potter",
+            "Deathly Hallows",
+            "The Deathly Hallows",
+            "Deathly Hallows: Part 1",
+            "The Deathly Hallows: Part 1",
+            "Harry Potter and the Deathly Hallows",
+            "Harry Potter and the Deathly Hallows Part 1",
+            "Harry Potter and the Deathly Hallows: Part 2",
+            "Harry Potter and the Deathly Hallows Part 2",
+        ],
+    },
+    { title: "Inside Out", src: "ISaHt3ps1dM" },
+    { title: "The Martian", src: "BH-UmA5Lt3g", alt: ["Martian"] },
+    { title: "Sherlock Holmes: A Game of Shadows", src: "qy6Kh5dkTeo", alt: ["Sherlock Holmes"] },
+    { title: "Sully", src: "fJ5ZLdJDBrg" },
+    { title: "Forrest Gump", src: "gAw9Ps-jwzM" },
+    { title: "Venom", src: "z5Knt1R8C4g" },
+    { title: "Shark Tale", src: "TxV4VUWk1fA" },
+    { title: "Coach Carter", src: "6p3GaCwvUoE" },
+    { title: "Pitch Perfect", src: "hGdz2rMbTIM" },
 ];
 
 function changeButton(mode) {
@@ -64,7 +92,7 @@ function changeButton(mode) {
 }
 
 function revealAnswer() {
-    inputField.style.color = "rgb(0,0,240)";
+    inputField.style.color = "rgb(74, 159, 255)";
     inputField.style.textAlign = "center";
     inputField.disabled = "true";
     inputField.value = movies[videoID]["title"];
@@ -76,7 +104,7 @@ function changeSRC() {
     videoID = Math.floor(Math.random() * movies.length);
     let newSRC = `https://www.youtube.com/embed/${movies[videoID]["src"]}?autoplay=1&modestbranding=1&controls=0&mute=0&rel=0`;
     player.src = newSRC;
-    inputField.style.color = "rgb(0,0,0)";
+    inputField.style.color = "white";
     inputField.style.textAlign = "left";
     inputField.disabled = false;
     inputField.value = "";
@@ -110,7 +138,7 @@ function checkAnswer() {
     }
     score = compareString(inputField.value, titleAnswers);
     if (score < 0.1) {
-        inputField.style.color = "rgb(0,128,0)";
+        inputField.style.color = "rgb(104, 255, 74)";
         inputField.style.textAlign = "center";
         inputField.disabled = true;
         inputField.value = movies[videoID]["title"];
@@ -122,5 +150,5 @@ function checkAnswer() {
         inputField.style.color = "Red";
     }
 }
-
+console.log("Movies:", movies.length);
 changeSRC();
