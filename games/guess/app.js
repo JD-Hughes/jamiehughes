@@ -70,6 +70,7 @@ let movies = [
     { title: "Shark Tale", src: "TxV4VUWk1fA" },
     { title: "Coach Carter", src: "6p3GaCwvUoE" },
     { title: "Pitch Perfect", src: "hGdz2rMbTIM" },
+    { title: "Kingsman: The Secret Service", src: "HDJEyqNw-9k", alt: ["Kingsman", "Kingsman the secret service"] },
 ];
 
 function changeButton(mode) {
