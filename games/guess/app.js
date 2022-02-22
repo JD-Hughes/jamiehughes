@@ -1,8 +1,10 @@
 const player = document.getElementById("video-player");
 const inputField = document.getElementById("player-input");
 const submitButton = document.getElementById("submit-btn");
+const scoreEl = document.getElementById("score");
 
 let videoID = null;
+let playerScore = 0;
 
 const searchOptions = { includeScore: true, threshold: 0.15 };
 
@@ -13,7 +15,20 @@ let movies = [
     { title: "Taken", src: "jZOywn1qArI" },
     { title: "The Social Network", src: "2BE2XhnZ_4g", alt: ["Social Network"] },
     { title: "Avengers: Infinity War", src: "EpI3x6gf2uA", alt: ["Infinity War", "Avengers Infinity War"] },
-    { title: "Spider-man: Into the spider-verse", src: "oJyz1snRgOU", alt: ["spiderman Into the spiderverse", "Spiderman", "Into the spider verse", "Into the spiderverse"] },
+    {
+        title: "Spider-man: Into the spider-verse",
+        src: "oJyz1snRgOU",
+        alt: [
+            "spiderman Into the spiderverse",
+            "Spiderman",
+            "Into the spider verse",
+            "Into the spiderverse",
+            "spider-man Into the spiderverse",
+            "spider man Into the spiderverse",
+            "spider-man",
+            "spider man",
+        ],
+    },
     { title: "Avengers: Endgame", src: "tdMaz-x8BAI", alt: ["Endgame"] },
     { title: "X-Men: Days of future past", src: "T9GFyZ5LREQ", alt: ["xmen", "days of future past"] },
     { title: "Deadpool", src: "tLmStxxzhkI" },
@@ -21,7 +36,7 @@ let movies = [
     { title: "The Dark Knight", src: "nyepdtx_UI4" },
     { title: "Inception", src: "TAbbJT0ZXmk" },
     { title: "The Avengers", src: "SLD9xzJ4oeU", alt: ["Avengers"] },
-    { title: "Mission Impossible: Ghost Protocol", src: "qtA0JS1lBaY", alt: ["Mission Impossible", "Ghost Protocol"] },
+    { title: "Mission Impossible: Ghost Protocol", src: "qtA0JS1lBaY", alt: ["Mission Impossible", "Ghost Protocol", "Mission Impossible Ghost Protocol"] },
     { title: "Mission Impossible: Fallout", src: "hhLIwmgx3vI", alt: ["Mission Impossible", "Fallout"] },
     { title: "Legend", src: "zZ7AWVKbPWY" },
     { title: "The Matrix", src: "zE7PKRjrid4" },
@@ -37,7 +52,7 @@ let movies = [
     { title: "Shrek 2", src: "A_HjMIjzyMU" },
     { title: "The Incredibles", src: "IRPI3lSACFc" },
     { title: "Despicable Me", src: "8R1OS5jPh2s" },
-    { title: "Kung Fu Panda", src: "Jy2_J5WCzDY" },
+    { title: "Kung Fu Panda", src: "Jy2_J5WCzDY", alt: ["Kung-fu Panda", "Kungfu Panda"] },
     { title: "Ratatouille", src: "IojkKlmwnOE" },
     { title: "Guardians Of The Galaxy", src: "YVTXTPYsNDY", alt: ["Guardians"] },
     { title: "Whiplash", src: "xDAsABdkWSc" },
@@ -66,11 +81,36 @@ let movies = [
     { title: "Sherlock Holmes: A Game of Shadows", src: "qy6Kh5dkTeo", alt: ["Sherlock Holmes"] },
     { title: "Sully", src: "fJ5ZLdJDBrg" },
     { title: "Forrest Gump", src: "gAw9Ps-jwzM" },
-    { title: "Venom", src: "z5Knt1R8C4g" },
+    { title: "Venom", src: "UCGdsPwcKKg" },
     { title: "Shark Tale", src: "TxV4VUWk1fA" },
     { title: "Coach Carter", src: "6p3GaCwvUoE" },
     { title: "Pitch Perfect", src: "hGdz2rMbTIM" },
     { title: "Kingsman: The Secret Service", src: "HDJEyqNw-9k", alt: ["Kingsman", "Kingsman the secret service"] },
+    { title: "Law Abiding Citizen", src: "7uR5PyoLa3o" },
+    { title: "Fight Club", src: "PXcEPSUl0uE" },
+    { title: "Casino Royale", src: "iZxNbAwY_rk", alt: ["James Bond"] },
+    { title: "300", src: "70aq-TyeLf8" },
+    { title: "Indiana Jones and the Raiders of the Lost Ark", src: "mC1ikwQ5Zgc", alt: ["Indiana Jones", "Raiders of the Lost Ark"] },
+    { title: "The Great Escape", src: "O-qHlz4hfak" },
+    { title: "Les Misérables", src: "ojoC-Kbzpo8", alt: ["Les Miserables"] },
+    { title: "Love Actually", src: "cfNzZre-sIU" },
+    { title: "Mamma Mia", src: "QRoWiTcO7dk" },
+    { title: "2012", src: "S1Kbym7WYzs" },
+    { title: "Star Trek: Into Darkness", src: "MvQBlk50UMA", alt: ["Star Trek", "Into Darkness", "Star Trek Into Darkness"] },
+    { title: "Scarface", src: "a_z4IuxAqpE" },
+    { title: "Wonder Woman", src: "pJCgeOAKXyg" },
+    { title: "Rocky", src: "_YYmfM2TfUA" },
+    { title: "The Italian Job", src: "sOGhuhC4AF0", alt: ["Italian Job"] },
+    { title: "Blades of Glory", src: "sPFRZP4qY7I" },
+    { title: "Home alone", src: "S7OWoc-j8qQ" },
+    { title: "Pokémon Detective Pikachu", src: "Jwasv_AImtI", alt: ["Pokemon Detective Pikachu", "Detective Pikachu"] },
+    { title: "Atomic Blonde", src: "DxCjqhDD7X4" },
+    { title: "Airplane!", src: "FNkpIDBtC2c", alt: ["Airplane", "Aeroplane"] },
+    { title: "Crocodile Dundee", src: "dSnosk4tWrg" },
+    { title: "The Greatest Showman", src: "g9r5PFZihC4" },
+    { title: "Titanic", src: "RXii-MAqt5E" },
+    { title: "Ocean's Thirteen", src: "7oM7-Jsa168", alt: ["Oceans Thirteen", "Ocean's 13", "Oceans 13", "Oceans 11", "Ocean's 11", "Oceans Eleven", "Ocean's Eleven"] },
+    { title: "Elf", src: "cbQZ8GK2usU" },
 ];
 
 function changeButton(mode) {
@@ -90,6 +130,12 @@ function changeButton(mode) {
         submitButton.style.background = "Red";
         inputField.focus();
     }
+}
+
+function updateScore(amount) {
+    playerScore = playerScore + amount;
+    scoreEl.innerHTML = `Score: <strong>${playerScore}</strong>`;
+    console.log("Updating Score");
 }
 
 function revealAnswer() {
@@ -145,6 +191,7 @@ function checkAnswer() {
         inputField.value = movies[videoID]["title"];
         movies.splice(videoID, 1);
         changeButton("next");
+        updateScore(1);
     } else if (score < 0.25) {
         inputField.style.color = "Orange";
     } else {

@@ -12,6 +12,16 @@ body {
     font-family: sans-serif;
 }
 
+h1 {
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 0.8em;
+    color: #797979;
+    text-align: center;
+}
+
 .videoWrapper {
     height: 540px;
     overflow: hidden;
@@ -38,4 +48,15 @@ input {
     background: red;
     padding: 0.5em 2em;
     border: none;
+}
+
+#score {
+    font-size: 2em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: rgb(128, 1, 121);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0.25em 0.4em;
+    border-bottom-right-radius: 0.25em;
 }
