@@ -914,9 +914,14 @@ function newPrompt() {
     let randomPrompt = Math.floor(Math.random() * prompts[gamemode].length);
     rotateText();
     setTimeout(() => {
-        textEl.innerText = prompts[gamemode][randomPrompt];
-        prompts[gamemode].splice(randomPrompt, 1);
-        rotateText();
+        if (prompts[gamemode][randomPrompt]) {
+            textEl.innerText = prompts[gamemode][randomPrompt];
+            prompts[gamemode].splice(randomPrompt, 1);
+            rotateText();
+        } else {
+            textEl.innerText = "No more questions :(";
+            rotateText();
+        }
     }, 600);
 }
 
