@@ -901,6 +901,7 @@ let prompts = [
         "Are emotions necessary for human survival? Why or why not?",
         "What is the most beneficial emotion? How about the most destructive?",
         "Do people have a right to be happy or should they have to earn it?",
+        "When was the last time you meaningfully impacted someone else's life?",
         "Do animals experience emotions? If so, do they experience emotions in the same way humans do? If not, how do they experience the world and what dictates their behavior?",
     ],
 ];
