@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>What year was that?</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="loader"><span>Loading...</span></div>
+        <h1 class="game-title">PRIMARY GAME TITLE</h1>
+        <div class="content-container">
+            <div class="article-text">
+                <h2 id="article-title">This is the article title</h2>
+                <p id="article-body">This is the body of the article. It could be several sentences long and wrapping over multiple lines</p>
+            </div>
+            <img src="https://www.charitycomms.org.uk/wp-content/uploads/2019/02/placeholder-image-square.jpg" alt="placeholder-image-square" id="article-img" />
+        </div>
+        <div id="select-container" class="hide-container">
+            <span class="select-btn wide-button" onclick="toggleHiddenSection()">SELECT YEAR</span>
+            <div id="grid-container"></div>
+            <span class="submit-btn wide-button">SUBMIT</span>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
