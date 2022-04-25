@@ -11,10 +11,46 @@
     {
         "name": "Jamie Hughes",
         "basesalary": 20111,
-        "department": "WANTAGE TOWNSHIP",
+        "department": "Family Project Office",
         "organization": "C. Hoare & Co",
         "jobtitle": "Intern",
         "source": "Salary",
         "hash": "3f2577cd12b7961458d9bcc07dd27399"
+    },
+    {
+        "name": "Jamie Hughes",
+        "basesalary": 17388.8,
+        "organization": "Winchester Racquets & Fitness",
+        "jobtitle": "Receptionist",
+        "source": "Hourly",
+        "hash": "3f2577cd12b7935858d9bcc07dd27399"
+    },
+    {
+        "name": "Jeff Bezos",
+        "basesalary": 64000000000,
+        "organization": "Amazon",
+        "jobtitle": "CEO",
+        "source": "Salary"
+    },
+    {
+        "name": "Bill Gates",
+        "basesalary": 10700000000,
+        "organization": "Microsoft",
+        "jobtitle": "CEO",
+        "source": "Salary"
+    },
+    {
+        "name": "Mark Zuckerberg",
+        "basesalary": 23400000,
+        "organization": "Facebook",
+        "jobtitle": "CEO",
+        "source": "Salary"
+    },
+    {
+        "name": "Jimmy Fallon",
+        "basesalary": 15000000,
+        "organization": "The Tonight Show",
+        "jobtitle": "Talk show host",
+        "source": "Salary"
     }
 ]
