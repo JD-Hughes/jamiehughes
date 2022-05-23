@@ -4,6 +4,29 @@ html {
     margin: 0;
     background-color: white;
 }
+
+.nameContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+
+h1 {
+    margin: 0;
+}
+
+.title {
+    font-size: 2vw;
+}
+
+.name {
+    font-size: 5vw;
+}
+
 canvas {
     width: 100%;
     height: 100vh;
