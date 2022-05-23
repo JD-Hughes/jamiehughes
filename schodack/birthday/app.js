@@ -1,6 +1,7 @@
 // global variables
 const confetti = document.getElementById("confetti");
 const confettiCtx = confetti.getContext("2d");
+const nameContainer = document.getElementById("nameContainer");
 let container,
     confettiElements = [],
     clickPosition;
@@ -143,3 +144,42 @@ function confettiLoop() {
     }
     setTimeout(confettiLoop, 700 + Math.random() * 1700);
 }
+
+function updateLoop() {
+    fetch("data.json")
+        .then((response) => response.json())
+        .then((data) => setBirthdays(data));
+    setTimeout(updateLoop, 30000); // Updates every 30 seconds
+}
+
+function setBirthdays(data) {
+    var whosBirthday = []; //Init the array
+    var dateToday = new Date(); //Get todays date
+    for (let i = 0; i < data.length; i++) {
+        //Itterate through the data
+        const element = data[i];
+        const birthday = new Date(element["date"]); //Convert the birthdate into date format
+        if (birthday.getDate() === dateToday.getDate() && birthday.getMonth() === dateToday.getMonth()) {
+            //Compare the day and month to see if they both match
+            whosBirthday.push(element["name"]); //Push to the array
+        }
+    }
+    if (whosBirthday.length == 0) whosBirthday.push("NOBODY!");
+
+    var nameElements = nameContainer.getElementsByClassName("name"); //Remove all the existing names on the page
+    while (nameElements[0]) {
+        nameElements[0].parentNode.removeChild(nameElements[0]);
+    }
+
+    for (let i = 0; i < whosBirthday.length; i++) {
+        //Itterate through the list of names in the birthday list
+        const element = whosBirthday[i];
+        const birthdayName = document.createElement("h1");
+        birthdayName.className = "name";
+        birthdayName.innerText = element + "!"; //Append an ! to all of them
+        nameContainer.appendChild(birthdayName);
+    }
+    console.log(whosBirthday); //Output the array
+}
+
+updateLoop();

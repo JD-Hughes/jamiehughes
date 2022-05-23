@@ -5,7 +5,7 @@ html {
     background-color: white;
 }
 
-.nameContainer {
+#nameContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
