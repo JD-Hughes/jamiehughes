@@ -23,17 +23,16 @@ const data = {
         "Waterfront Manager",
         "Race Marshall",
         "Maintenance/Operations Crew Member",
-        "Bank Intern",
         "Receptionist",
         "Activities Manager",
         "Aerospace Technical Apprentice",
+        "Intern at a private bank in London",
     ],
-    fitbit: { steps: 1, floors: 1, distance: 1 },
     height: {
-        metric: 178,
+        metric: 178, // In cm
         imperial: "5ft 10",
         random: [
-            { name: "toothpicks", length: 6.3 },
+            { name: "toothpicks", length: 6.3 }, //Length of objects in cm
             { name: "bananas", length: 13 },
             { name: "Boeing 747's", length: 7630 },
             { name: "stacked quaters", length: 0.175 },
