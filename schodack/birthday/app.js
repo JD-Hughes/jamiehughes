@@ -164,7 +164,7 @@ function setBirthdays(data) {
             whosBirthday.push(element["name"]); //Push to the array
         }
     }
-    if (whosBirthday.length == 0) whosBirthday.push("NOBODY!");
+    if (whosBirthday.length == 0) whosBirthday.push("NOBODY!"); //TODO: Add the "upNext" function here!
 
     var nameElements = nameContainer.getElementsByClassName("name"); //Remove all the existing names on the page
     while (nameElements[0]) {
@@ -180,6 +180,38 @@ function setBirthdays(data) {
         nameContainer.appendChild(birthdayName);
     }
     console.log(whosBirthday); //Output the array
+}
+
+function daysTill(day, month) {
+    var one_day = 1000 * 60 * 60 * 24;
+    var currentDate = new Date();
+    var inputDate = new Date(currentDate.getFullYear(), month, day);
+
+    // To Calculate the result in milliseconds and then converting into days
+    var Result = Math.round((inputDate.getTime() - currentDate.getTime()) / one_day + 1);
+
+    if (Result <= 0) {
+        inputDate = new Date(currentDate.getFullYear() + 1, month, day);
+        Result = Math.round((inputDate.getTime() - currentDate.getTime()) / one_day + 1);
+    }
+
+    // To remove the decimals from the (Result) resulting days value
+    var Final_Result = Result.toFixed(0);
+    return Final_Result;
+}
+
+function upNext() {
+    var minDays = 999;
+    fetch("data.json")
+        .then((response) => response.json())
+        .then((data) => {
+            for (let i = 0; i < data.length; i++) {
+                const element = new Date(data[i]["date"]);
+                var daysUntilBirthday = daysTill(element.getDate(), element.getMonth());
+                minDays = Math.min(daysUntilBirthday, minDays);
+            }
+            console.log(`Next birthday in ${minDays} Day(s)!`);
+        });
 }
 
 updateLoop();

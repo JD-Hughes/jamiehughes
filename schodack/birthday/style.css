@@ -20,11 +20,11 @@ h1 {
 }
 
 .title {
-    font-size: 2vw;
+    font-size: max(20px, 2vw);
 }
 
 .name {
-    font-size: 5vw;
+    font-size: max(50px, 5vw);
 }
 
 canvas {
