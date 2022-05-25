@@ -21,16 +21,16 @@ h1 {
 }
 
 .title {
-    font-size: max(20px, 2vw);
+    font-size: max(3vh, 2vw);
 }
 
 .name {
-    font-size: max(50px, 5vw);
+    font-size: max(7vh, 5vw);
 }
 
 .up-next {
     color: white;
-    font-size: max(20px, 2vw);
+    font-size: max(3vh, 2vw);
     position: absolute;
     bottom: 0;
     width: 100%;
