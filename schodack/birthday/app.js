@@ -149,7 +149,7 @@ function updateLoop() {
     fetch("data.json")
         .then((response) => response.json())
         .then((data) => setBirthdays(data));
-    setTimeout(updateLoop, 3000); // Updates every 30 seconds
+    setTimeout(updateLoop, 30000); // Updates every 30 seconds
 }
 
 function setBirthdays(data) {
