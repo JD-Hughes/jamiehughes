@@ -3,6 +3,7 @@ html {
     padding: 0;
     margin: 0;
     background-color: white;
+    height: 100%;
 }
 
 #nameContainer {
@@ -25,6 +26,18 @@ h1 {
 
 .name {
     font-size: max(50px, 5vw);
+}
+
+.up-next {
+    color: white;
+    font-size: max(20px, 2vw);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    text-align: center;
+    padding: 20px;
+    margin: 0;
 }
 
 canvas {

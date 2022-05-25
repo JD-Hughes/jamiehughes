@@ -149,12 +149,13 @@ function updateLoop() {
     fetch("data.json")
         .then((response) => response.json())
         .then((data) => setBirthdays(data));
-    setTimeout(updateLoop, 30000); // Updates every 30 seconds
+    setTimeout(updateLoop, 3000); // Updates every 30 seconds
 }
 
 function setBirthdays(data) {
     var whosBirthday = []; //Init the array
     var dateToday = new Date(); //Get todays date
+    nameContainer.innerHTML = `<h1 class="title">Happy Birthday</h1>`;
     for (let i = 0; i < data.length; i++) {
         //Itterate through the data
         const element = data[i];
@@ -163,12 +164,6 @@ function setBirthdays(data) {
             //Compare the day and month to see if they both match
             whosBirthday.push(element["name"]); //Push to the array
         }
-    }
-    if (whosBirthday.length == 0) whosBirthday.push("NOBODY!"); //TODO: Add the "upNext" function here!
-
-    var nameElements = nameContainer.getElementsByClassName("name"); //Remove all the existing names on the page
-    while (nameElements[0]) {
-        nameElements[0].parentNode.removeChild(nameElements[0]);
     }
 
     for (let i = 0; i < whosBirthday.length; i++) {
@@ -179,6 +174,17 @@ function setBirthdays(data) {
         birthdayName.innerText = element + "!"; //Append an ! to all of them
         nameContainer.appendChild(birthdayName);
     }
+    if (whosBirthday.length == 0) {
+        const birthdayName = document.createElement("h1");
+        birthdayName.className = "name";
+        birthdayName.innerText = "NOBODY!"; //Display the word "NOBODY!" instead of a name
+        const upNextEl = document.createElement("h2");
+        upNextEl.className = "up-next";
+        upNextEl.innerText = upNext(data); //Show when the next birthday will be
+        nameContainer.appendChild(birthdayName);
+        nameContainer.appendChild(upNextEl);
+    }
+
     console.log(whosBirthday); //Output the array
 }
 
@@ -188,7 +194,7 @@ function daysTill(day, month) {
     var inputDate = new Date(currentDate.getFullYear(), month, day);
 
     // To Calculate the result in milliseconds and then converting into days
-    var Result = Math.round((inputDate.getTime() - currentDate.getTime()) / one_day + 1);
+    var Result = Math.round((inputDate.getTime() - currentDate.getTime()) / one_day);
 
     if (Result <= 0) {
         inputDate = new Date(currentDate.getFullYear() + 1, month, day);
@@ -200,18 +206,18 @@ function daysTill(day, month) {
     return Final_Result;
 }
 
-function upNext() {
+function upNext(data) {
     var minDays = 999;
-    fetch("data.json")
-        .then((response) => response.json())
-        .then((data) => {
-            for (let i = 0; i < data.length; i++) {
-                const element = new Date(data[i]["date"]);
-                var daysUntilBirthday = daysTill(element.getDate(), element.getMonth());
-                minDays = Math.min(daysUntilBirthday, minDays);
-            }
-            console.log(`Next birthday in ${minDays} Day(s)!`);
-        });
+    for (let i = 0; i < data.length; i++) {
+        const element = new Date(data[i]["date"]);
+        var daysUntilBirthday = daysTill(element.getDate(), element.getMonth());
+        minDays = Math.min(daysUntilBirthday, minDays);
+    }
+    if (minDays == 1) {
+        return `Next birthday in ${minDays} Day!`;
+    } else {
+        return `Next birthday in ${minDays} Days!`;
+    }
 }
 
 updateLoop();
