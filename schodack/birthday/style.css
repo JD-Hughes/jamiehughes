@@ -44,3 +44,9 @@ canvas {
     width: 100%;
     height: 100vh;
 }
+
+.warning {
+    text-align: center;
+    color: red;
+    font-size: max(3vh, 2vw);
+}

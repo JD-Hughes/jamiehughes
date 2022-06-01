@@ -155,7 +155,7 @@ function updateLoop() {
 function setBirthdays(data) {
     var whosBirthday = []; //Init the array
     var dateToday = new Date(); //Get todays date
-    nameContainer.innerHTML = `<h1 class="title">Happy Birthday</h1>`;
+    nameContainer.innerHTML = `<h1 class="title">Happy Birthday</h1>`; //Reset the page
     for (let i = 0; i < data.length; i++) {
         //Itterate through the data
         const element = data[i];
